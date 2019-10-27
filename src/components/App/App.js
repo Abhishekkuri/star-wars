@@ -1,10 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Main from "../Main/Main";
+import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello Star wars</h1>
+    <div className="body">
+      <Main />
     </div>
   );
 }
