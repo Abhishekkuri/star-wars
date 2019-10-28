@@ -31,11 +31,20 @@ const Footer = () => {
                   className="fa fa-envelope-square fa-3x social"
                 />
               </a>
+              <a href="https://github.com/Abhishekkuri/star-wars">
+                <i
+                  id="social-em"
+                  className="fa fa-github-square fa-3x social"
+                />
+              </a>
+              <a href="https://linkedin.com/in/abhishekkuri">
+                <i
+                  id="social-em"
+                  className="fa fa-linkedin-square fa-3x social"
+                />
+              </a>
             </div>
-            <div className="nav navbar-nav navbar-right">
-              <a href="https://github.com/Abhishekkuri/star-wars">Github</a>
-              <a href="https://linkedin.com/in/abhishekkuri">LinkedIn</a>
-            </div>
+            <div className="nav navbar-nav navbar-right" />
           </div>
         </nav>
       </footer>

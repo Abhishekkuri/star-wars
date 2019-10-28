@@ -3,18 +3,21 @@ import axios from "axios";
 import _ from "lodash";
 import CharacterDetail from "../CharacterDetail/CharacterDetail";
 import Error from "../Error/Error";
+import Count from "../Count/Count";
 
 class Search extends Component {
   state = {
     characters: [],
     count: 0,
-    isLoading: true,
-    error: null,
-    charactersToShow: []
+    isLoading: false,
+    error: []
   };
 
   handleSearch = event => {
     event.preventDefault();
+    this.setState({
+      isLoading: true
+    });
     let CHARACTER_NAME = event.target.elements.character.value;
     axios
       .get("https://swapi.co/api/people/?search=" + CHARACTER_NAME)
@@ -24,28 +27,50 @@ class Search extends Component {
         this.setState({
           characters: result,
           count: result.length,
-          isLoading: false,
-          charactersToShow: result.slice(0, 5)
+          isLoading: false
         });
       })
       .catch(error => {
         console.log(error);
         this.setState({
           isLoading: false,
-          error: error
+          error: _.values(error)
         });
       });
   };
 
   count = () => {
     if (this.state.count !== 0) {
-      return <div>Total Characters : {this.state.count}</div>;
+      return <Count count={this.state.count} />;
     }
+  };
+
+  spinner = () => {
+    if (this.state.isLoading) {
+      return (
+        <span
+          className="spinner-grow spinner-grow-sm"
+          role="status"
+          aria-hidden="true"
+        />
+      );
+    }
+  };
+
+  error = () => {
+    this.state.error.map(error => {
+      if (error !== []) {
+        return <Error error={error} key={error} />;
+      } else {
+        return null;
+      }
+    });
   };
 
   render() {
     return (
       <>
+        {this.error()}
         <form onSubmit={this.handleSearch}>
           <div className="form-group">
             <div className="row">
@@ -57,11 +82,12 @@ class Search extends Component {
                 name="character"
               />
               <button type="submit" className="btn btn-primary col-md-3">
-                <span
+                {/* <span
                   className="spinner-grow spinner-grow-sm"
                   role="status"
                   aria-hidden="true"
-                />
+                /> */}
+                {this.spinner()}
                 Search
               </button>
             </div>
@@ -74,9 +100,11 @@ class Search extends Component {
 
         <br />
 
-        {this.state.charactersToShow.map(character => {
+        {this.state.characters.slice(0, 5).map(character => {
           return <CharacterDetail character={character} key={character.name} />;
         })}
+
+        <br />
       </>
     );
   }

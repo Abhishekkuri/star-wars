@@ -66,16 +66,6 @@ const CharacterDetail = characterDetail => {
               <div>HomeWorld : {homeworld}</div>
             </div>
           </div>
-          {/* <div className="col-12 col-xl-4 order-3 order-xl-4">
-            <div className="d-flex align-items-center justify-content-start block">
-              <div>
-                <h3>Films</h3>
-                {filmsToShow.map(film => {
-                  return <Film film={film} key={film} />;
-                })}
-              </div>
-            </div>
-          </div> */}
         </div>
       </div>
 
