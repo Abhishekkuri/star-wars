@@ -1,5 +1,4 @@
 import React from "react";
-import _ from "lodash";
 import "./CharacterDetail.css";
 import Film from "../Film/Film";
 
@@ -24,6 +23,7 @@ const CharacterDetail = characterDetail => {
   const filmsToShow = [...films];
   return (
     <>
+      <br />
       <div className="container">
         <div className="row">
           <div className="col-12 col-md-6 col-xl-4">
@@ -68,7 +68,6 @@ const CharacterDetail = characterDetail => {
           </div>
         </div>
       </div>
-
       <br />
     </>
   );

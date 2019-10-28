@@ -41,7 +41,12 @@ class Search extends Component {
 
   count = () => {
     if (this.state.count !== 0) {
-      return <Count count={this.state.count} />;
+      return (
+        <>
+          <br />
+          <Count count={this.state.count} />
+        </>
+      );
     }
   };
 
@@ -81,12 +86,8 @@ class Search extends Component {
                 placeholder="Character's name"
                 name="character"
               />
-              <button type="submit" className="btn btn-primary col-md-3">
-                {/* <span
-                  className="spinner-grow spinner-grow-sm"
-                  role="status"
-                  aria-hidden="true"
-                /> */}
+              <div className="col-md-1" />
+              <button type="submit" className="btn btn-primary col-md-2">
                 {this.spinner()}
                 Search
               </button>
@@ -94,17 +95,11 @@ class Search extends Component {
           </div>
         </form>
 
-        <br />
-
         <div>{this.count()}</div>
-
-        <br />
 
         {this.state.characters.slice(0, 5).map(character => {
           return <CharacterDetail character={character} key={character.name} />;
         })}
-
-        <br />
       </>
     );
   }

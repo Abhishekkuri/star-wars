@@ -10,9 +10,6 @@ const Header = () => {
         </a>
       </div>
       <nav className="nav nav-pills flex-column flex-sm-row">
-        {/* <a className="a.navbar-brand" href="#">
-          Active
-        </a> */}
         <a className="flex-sm-fill text-sm-center nav-link active" href="#">
           Active
         </a>

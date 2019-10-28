@@ -1,10 +1,4 @@
 .body {
-  /* background-image: url("/milky-way.jpg"); */
-  /* background-position: center center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover; */
   background-color: black;
-  color: yellow;
-  /* width: 100%; */
+  color: orange;
 }
