@@ -8,7 +8,7 @@ const Header = () => {
       <div className="brand">
         <a className="navbar-brand" href="https://www.starwars.com/">
           <img
-            src="https://raw.githubusercontent.com/Abhishekkuri/star-wars/master/public/Star_Wars_logo.ico"
+            src="https://raw.githubusercontent.com/Abhishekkuri/star-wars/master/public/Images/Star_Wars_logo.ico"
             alt="Star_Wars_logo"
           />
         </a>
