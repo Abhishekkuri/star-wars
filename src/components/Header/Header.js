@@ -7,7 +7,10 @@ const Header = () => {
     <div>
       <div className="brand">
         <a className="navbar-brand" href="https://www.starwars.com/">
-          <img src="/Star_Wars_logo.ico" alt="Star_Wars_logo" />
+          <img
+            src="https://raw.githubusercontent.com/Abhishekkuri/star-wars/master/public/Star_Wars_logo.ico"
+            alt="Star_Wars_logo"
+          />
         </a>
       </div>
       <nav className="nav nav-pills flex-column flex-sm-row">
