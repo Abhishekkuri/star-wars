@@ -5,7 +5,11 @@ import CharacterDetail from "../CharacterDetail/CharacterDetail";
 import Error from "../Error/Error";
 import Count from "../Count/Count";
 
+/**
+ * Search Component to manage the searching of a character and maintaining the State
+ */
 class Search extends Component {
+  // Default State
   state = {
     characters: [],
     count: 0,
@@ -13,11 +17,14 @@ class Search extends Component {
     error: []
   };
 
+  // Search Evenet Handler to fetch the data using axios library
   handleSearch = event => {
     event.preventDefault();
+    // Setting the isLoading true for the Spinner
     this.setState({
       isLoading: true
     });
+    // Fetching the data with character name using CHARACTER_NAME
     let CHARACTER_NAME = event.target.elements.character.value;
     axios
       .get("https://swapi.co/api/people/?search=" + CHARACTER_NAME)
@@ -30,6 +37,7 @@ class Search extends Component {
           isLoading: false
         });
       })
+      // Catching the error  and setting it inside the state
       .catch(error => {
         console.log(error);
         this.setState({
@@ -39,6 +47,7 @@ class Search extends Component {
       });
   };
 
+  // Function to render the Count Component which shows the number of Characters fetched in the result of fetch query
   count = () => {
     if (this.state.count !== 0) {
       return (
@@ -50,6 +59,7 @@ class Search extends Component {
     }
   };
 
+  // Function to render the Spinner inside the button based on isLoading property of state
   spinner = () => {
     if (this.state.isLoading) {
       return (
@@ -62,6 +72,7 @@ class Search extends Component {
     }
   };
 
+  //Function to render the error Component in case of any error
   error = () => {
     this.state.error.map(error => {
       if (error !== []) {
@@ -72,6 +83,7 @@ class Search extends Component {
     });
   };
 
+  // Render method to render the JSX of Search body
   render() {
     return (
       <>
@@ -96,7 +108,7 @@ class Search extends Component {
         </form>
 
         <div>{this.count()}</div>
-
+        {/* Rendering the CharacterDetail Component to show the details of a character. Showing only 5 characters in case of the result  */}
         {this.state.characters.slice(0, 5).map(character => {
           return <CharacterDetail character={character} key={character.name} />;
         })}

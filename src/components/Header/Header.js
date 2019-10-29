@@ -2,6 +2,9 @@ import React from "react";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
 
+/**
+ * Header Component to show a navbar with Nav Links
+ */
 const Header = () => {
   return (
     <div>

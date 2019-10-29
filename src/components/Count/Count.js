@@ -1,5 +1,8 @@
 import React from "react";
 
+/**
+ * Count Component to show the total number of characters.
+ */
 const Count = props => {
   return (
     <>

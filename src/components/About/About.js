@@ -1,5 +1,8 @@
 import React from "react";
 
+/**
+ * About page to show the details about the application.
+ */
 const About = () => {
   return (
     <div>

@@ -1,6 +1,9 @@
 import React from "react";
 import "./Footer.css";
 
+/**
+ * Footer component to show the Social information about me
+ */
 const Footer = () => {
   return (
     <>

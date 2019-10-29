@@ -2,6 +2,10 @@ import React from "react";
 import "./CharacterDetail.css";
 import Film from "../Film/Film";
 
+/**
+ * CharacterDetail component to show the details of a character on the page
+ *The Compenet contains the responsive layout
+ */
 const CharacterDetail = characterDetail => {
   const character = characterDetail.character;
   const {
