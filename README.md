@@ -31,4 +31,6 @@ Starwars application has following functionalities in it :
 # How to run application:
 - Click on the Link " https://codesandbox.io/s/github/Abhishekkuri/star-wars " mentioned above.
 - It will open the Code Repository.
-- 
+- Click on Open in New Window to have the best experience mentioned as below.
+
+![Screenshot] (https://github.com/Abhishekkuri/star-wars/blob/master/public/Images/Click%20This.png)
