@@ -3,6 +3,10 @@ import React from "react";
 const About = () => {
   return (
     <div>
+      <h1 id="starwars">star-wars</h1>
+
+      <p>Created with CodeSandbox</p>
+
       <h1 id="welcometostarwarsapplication">
         Welcome to Starwars Application!
       </h1>
@@ -82,6 +86,31 @@ const About = () => {
           <strong>Black and Orange</strong>.
         </li>
       </ul>
+
+      <h1 id="notes">Notes:</h1>
+
+      <ul>
+        <li>You may face a problem sometimes with a logo.</li>
+      </ul>
+
+      <h1 id="howtoruntheapplication">How to run the application:</h1>
+
+      <ul>
+        <li>Click on the Link mentioned above.</li>
+
+        <li>It will open the Code Repository.</li>
+
+        <li>
+          Click on Open in New Window to have the best experience mentioned
+          below.
+        </li>
+      </ul>
+
+      <p>
+        <a href="https://github.com/Abhishekkuri/star-wars/blob/master/public/Images/Click%20This.png">
+          Click This for Screenshot
+        </a>
+      </p>
     </div>
   );
 };
