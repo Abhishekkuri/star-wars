@@ -5,7 +5,6 @@ import React from "react";
  * @param {*} props  the films
  */
 const film = props => {
-  console.log(props.film);
   return (
     <>
       <div>

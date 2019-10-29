@@ -29,7 +29,6 @@ class Search extends Component {
     axios
       .get("https://swapi.co/api/people/?search=" + CHARACTER_NAME)
       .then(response => {
-        console.log(response.data.results);
         const result = _.values(response.data.results);
         this.setState({
           characters: result,
@@ -39,7 +38,6 @@ class Search extends Component {
       })
       // Catching the error  and setting it inside the state
       .catch(error => {
-        console.log(error);
         this.setState({
           isLoading: false,
           error: _.values(error)

@@ -19,10 +19,7 @@ const CharacterDetail = characterDetail => {
     mass,
     name,
     skin_color,
-    species,
-    starships,
-    url,
-    vehicles
+    species
   } = character;
   const filmsToShow = [...films];
   return (
