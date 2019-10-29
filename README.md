@@ -1,15 +1,16 @@
 # star-wars
+
 Created with CodeSandbox
 
 # Welcome to Starwars Application!
 
-Hi! **Starwars** fans. 
+Hi! **Starwars** fans.
 This is a Simple Starwars Web Application written in ReactJS.
-
 
 # Functionalities
 
 Starwars application has following functionalities in it :
+
 - A **Logo** on top which redirects to Starwars website.
 - An Independent **Header** component to show the Navbar and links to go to Search or About pages.
 - Routing is done with **React-Router**.
@@ -23,14 +24,17 @@ Starwars application has following functionalities in it :
 - The UI is made with responsiveness. **Flexbox** is used for the purpose.
 - About Page contains the same Information.
 - At the end of the page **Footer** is included as an independent component to have all the social information about me(Plz feel free to contact me any time).
+- Unit Testing is done for some components with **Jest and Enzyme**.
 - UI is given a simple theme of Starwars which is **Black and Orange**.
 
 # Notes:
+
 - You may face problem sometimes with logo.
 
 # How to run application:
+
 - Click on the Link " https://codesandbox.io/s/github/Abhishekkuri/star-wars " mentioned above.
 - It will open the Code Repository.
 - Click on Open in New Window to have the best experience mentioned as below.
 
-![Screenshot] (https://github.com/Abhishekkuri/star-wars/blob/master/public/Images/Click%20This.png)
+![Screenshot](https://github.com/Abhishekkuri/star-wars/blob/master/public/Images/Click%20This.png)

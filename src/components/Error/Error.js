@@ -2,10 +2,15 @@ import React from "react";
 
 /**
  * Error Component to show the error message from Backend
- * @param {*} props error body
+ * @param {*} props contains error body
  */
 const error = props => {
-  return <>Error:{props.error.message}</>;
+  const { message } = props.error;
+  return (
+    <>
+      <div>Error : {message}</div>
+    </>
+  );
 };
 
 export default error;
