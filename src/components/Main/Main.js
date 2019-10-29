@@ -1,23 +1,9 @@
 import React, { Component } from "react";
-import Search from "../Search/Search";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 
 import "./Main.css";
-
-// class Main extends Component {
-//   render() {
-//     return (
-//       <>
-//         <Header />
-//         <br />
-//         <Search />
-//         <br />
-//         <Footer className="footer" />
-//       </>
-//     );
-//   }
-// }
+import Routes from "../Routes/Routes";
 
 class Main extends Component {
   render() {
@@ -25,11 +11,9 @@ class Main extends Component {
       <>
         <div id="page-container">
           <div id="content-wrap">
-            {/* <!-- all other page content --> */}
             <Header />
             <br />
-            <Search />
-            {/* <br /> */}
+            <Routes />
           </div>
           <footer id="footer">
             <Footer />

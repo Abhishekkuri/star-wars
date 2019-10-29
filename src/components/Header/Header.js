@@ -1,5 +1,6 @@
 import React from "react";
 import "./Header.css";
+import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -10,15 +11,12 @@ const Header = () => {
         </a>
       </div>
       <nav className="nav nav-pills flex-column flex-sm-row">
-        <a className="flex-sm-fill text-sm-center nav-link active" href="#">
-          Active
-        </a>
-        <a className="flex-sm-fill text-sm-center nav-link" href="#">
-          Longer nav link
-        </a>
-        <a className="flex-sm-fill text-sm-center nav-link" href="#">
-          Link
-        </a>
+        <NavLink className="flex-sm-fill text-sm-center nav-link " exact to="/">
+          Home
+        </NavLink>
+        <NavLink className="flex-sm-fill text-sm-center nav-link " to="/about">
+          About
+        </NavLink>
         <a
           className="flex-sm-fill text-sm-center nav-link disabled"
           href="#"
